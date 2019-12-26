@@ -45,7 +45,30 @@ closeNav.addEventListener('click', function(e) {
 });
 
 
+//fetch aPI data for btc and eth price on hero section
+const btcMultipleUSD = document.querySelector('.btc-price-usd');
+const btcMultipleEUR = document.querySelector('.btc-price-eur');
+const ethMultipleUSD = document.querySelector('.eth-price-usd');
+const ethMultipleEUR = document.querySelector('.eth-price-eur');
 
+const multipleSymbolsPrice = () => {
+    fetch(`https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH&tsyms=USD,EUR`)
+    .then(result => {
+        console.log(result);
+        return result.json();
+
+    })
+    .then(data => {
+        console.log(data)
+        btcMultipleUSD.innerHTML = data.BTC.USD;
+        btcMultipleEUR.innerHTML = data.BTC.EUR;
+        ethMultipleUSD.innerHTML = data.ETH.USD;
+        ethMultipleEUR.innerHTML = data.ETH.EUR;
+
+    })
+};
+
+multipleSymbolsPrice();
 
 
 

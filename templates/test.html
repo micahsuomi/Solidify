@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Fetch</title>
+</head>
+<body>
+    
+    <h1>BTC Price</h1>
+    <p>USD: <span class="btc-usd"></span></p>
+    <p>JPY: <span class="btc-jpy"></span></p>
+    <p>EUR: <span class="btc-eur"></span></p>
+
+    <h1>BTC and ETH Price</h1>
+    <p>BTC</p>
+    <p>USD: <span class="btc-price-usd"></span></p>
+    <p>EUR: <span class="btc-price-eur"></span></p>
+    <p>ETH</p>
+    <p>USD: <span class="eth-price-usd"></span></p>
+    <p>EUR: <span class="eth-price-eur"></span></p>
+</body>
+
+
+<script>
+
+const API_KEY = '5a3c910d4d4fed7d3d6e711f3845a09d9916452c3ca4f60532b0bc5e703ba41c';
+const URL = 'https://min-api.cryptocompare.com/data/blockchain/list';
+const btcUSD = document.querySelector('.btc-usd');
+const btcJPY = document.querySelector('.btc-jpy');
+const btcEUR = document.querySelector('.btc-eur');
+const btcMultipleUSD = document.querySelector('.btc-price-usd');
+const btcMultipleEUR = document.querySelector('.btc-price-eur');
+const ethMultipleUSD = document.querySelector('.eth-price-usd');
+const ethMultipleEUR = document.querySelector('.eth-price-eur');
+
+
+
+const getBTCPrice = () => {
+    fetch(`https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,JPY,EUR`)
+    .then(result => {
+        console.log(result);
+        return result.json();
+
+    })
+    .then(data => {
+        console.log(data)
+        btcUSD.innerHTML = data.USD;
+        btcJPY.innerHTML = data.JPY;
+        btcEUR.innerHTML = data.EUR;
+
+    })
+}
+
+getBTCPrice();
+
+const multipleSymbolsPrice = () => {
+    fetch(`https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH&tsyms=USD,EUR`)
+    .then(result => {
+        console.log(result);
+        return result.json();
+
+    })
+    .then(data => {
+        console.log(data)
+        btcMultipleUSD.innerHTML = data.BTC.USD;
+        btcMultipleEUR.innerHTML = data.BTC.EUR;
+        ethMultipleUSD.innerHTML = data.ETH.USD;
+        ethMultipleEUR.innerHTML = data.ETH.EUR;
+
+    })
+};
+
+multipleSymbolsPrice();
+
+
+const getCoinsData = () => {
+    fetch(`https://min-api.cryptocompare.com/data/blockchain/list?api_key=${API_KEY}`)
+    .then(result => {
+        console.log(result);
+        return result.json();
+
+    })
+    .then(data => {
+        const getData = data.Data;
+        console.log(getData);
+        return getData;
+
+        
+    })
+}
+
+getCoinsData();
+
+
+const second = () => {
+    setTimeout(() => {
+        console.log('Async hi there');
+    }, 2000)
+}
+
+const first = () => {
+    console.log('hi there');
+    second();
+    console.log('the end')
+}
+first()
+
+
+</script>
+</html>
