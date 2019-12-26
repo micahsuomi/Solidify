@@ -1,0 +1,575 @@
+/*About*/
+
+    
+.about-front-container {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(39,37,44,0.8),
+        rgba(24,23,26,0.8)),
+        url("../imgs/about-front-img.jpg");
+        background-size: cover;
+        background-position: top;        
+    width: 100%;
+    -webkit-clip-path: polygon(0 0, 95% 0, 85% 100%, 0 100%);
+    clip-path: polygon(0 0, 95% 0, 89% 100%, 0 100%);
+    padding: 2rem 8rem;
+}
+
+.about-front-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10rem;
+    align-items: center;
+    grid-gap: 4rem;
+    justify-content: center;
+    margin-top:-8rem;
+}
+
+.about-front-image {
+    margin: auto auto;
+    align-self: center;
+    text-align: center;
+    
+}
+
+.blockchain-front {
+    width: 98%;
+}
+
+.blockchain-front:hover {
+    transform: scale(1.2);
+    transition: all 2s;
+}
+
+
+.about-front-header1 {
+    opacity: 0.8;
+    text-align: center;
+    font-weight: 600;
+    color: var(--light);
+    margin-top:8rem;
+    text-transform: uppercase;
+    font-size: var(--font-size-medium);
+}
+.about-front-text p {
+    color: var(--light);
+    opacity: 0.7;
+    font-size: var(--font-size-small);
+    margin-top: 0.5rem;
+}
+
+.mission-about {
+    padding: 12rem;
+    height: 80rem;
+    width: 100%;
+}
+
+.mission-about-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:5rem;
+    margin-top: 2rem;
+    padding: 5rem;
+    
+}
+
+.mission-heading {
+    color: var(--shadow);
+    font-size: var(--font-size-medium);
+    text-align: center;
+    text-transform: uppercase;
+    
+    }
+
+.mission-about-text p {
+    color: var(--grey-text);
+    opacity: 0.8;
+    font-size: var(--font-size-small);
+    margin-top: 1rem;
+}
+
+.mission-about-image {
+    background: url("../imgs/blockchain4.jpg") no-repeat center center/cover;
+}
+
+.usecases-container {
+    background-image: linear-gradient(
+    to right bottom,
+    rgba(43, 22, 95, 0.8),
+    rgba(219, 206, 245, 0.8)),
+    url("../imgs/usecases-background.jpg");
+    background-size: cover;
+    background-position: center;  
+    -webkit-clip-path: polygon(0 0, 100% 0, 87% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+    padding: 5rem 8rem;
+    width: 100%;
+    
+
+}
+
+.usecases-container h3 {
+    color: var(--light);
+    text-align: center;
+    font-weight: 600;
+    font-size: var(--font-size-medium);
+    text-transform: uppercase;
+}
+.usecases-wrapper {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.usecases-nested {
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    margin: 1rem;
+    background-color: white;
+}
+
+.usecases-nested:hover {
+    opacity: 1;
+}
+
+.usecasepic {
+    height: 20rem;
+    width: auto;
+    border-radius: 3px;
+    overflow: hidden;
+} 
+
+.usecases-img1 {
+    background-image: url("../imgs/logistics.jpg");
+    background-position: center;
+    background-size:cover;
+    
+}
+
+.usecases-img2 {
+    background: url("../imgs/finance.jpg") no-repeat center center/cover;
+   
+               
+}
+
+.usecases-img3 {
+    background: url("../imgs/realestate.jpg") no-repeat center center/cover;
+        
+}
+
+.usecases-img4 {
+    background: url("../imgs/healthcare.jpg") no-repeat center center/cover;
+  
+}
+
+.usecases-img5 {
+    background: url("../imgs/identity.jpg") no-repeat center center/cover;
+    
+}
+
+.usecases-img6 {
+    background: url("../imgs/foodsafety.jpg") no-repeat center center/cover;
+
+}
+
+.usecases-nested-header {
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: 600;  
+    color: var(--darker);  
+    font-size: var(--font-size-small);
+}
+
+.usecases-nested-text {
+    font-size: var(--font-size-verysmall);
+    color: var(--shadow);
+    margin-top: 1rem;
+    padding: 2rem;
+}
+
+
+.roadmap-container {
+
+    background-image: linear-gradient(to right bottom,
+    rgba(57,72,102,0.8),
+    rgba(24,23,26,0.8)),
+    url("../imgs/architecture-black-and-white-dark-2081166.jpg");
+    background-size: cover;
+    background-position: center;  
+    height: 85vh;
+    width: 100%;
+    -webkit-clip-path: polygon(18% 0, 100% 0, 100% 100%, 6% 100%);
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 6% 100%);
+    margin-top: 5rem;
+    padding: 12rem;
+
+}
+
+.roadmap-header h2 {
+    color: var(--light);
+    text-align: center;
+    font-weight: 600;
+    font-size: var(--font-size-medium);
+    text-transform: uppercase;
+    
+}
+.roadmap-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 6rem;
+    align-items: center;
+}
+.roadmap-icons {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-left: 10rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.roadmap-icon {
+    width: 10%;
+    opacity: 0.8;
+    cursor: pointer;
+    margin: 1rem;
+
+
+}
+
+
+.roadmap-icon-mobile {
+    width: 8%;
+    opacity: 0.8;
+    cursor: pointer;
+    margin: 1rem;
+
+
+
+}
+
+.roadmap-icon-code {
+    width: 9%;
+    opacity: 0.8;
+    cursor: pointer;
+    margin: 1rem;
+
+
+}
+.roadmap-icons img:hover {
+    opacity: 1;
+}
+.roadmap img{
+    width: 100%;
+}
+
+.ico-container {
+    padding: 12rem;
+}
+
+.ico-header {
+    color: var(--shadow);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: var(--font-size-medium);
+}
+
+.ico-wrapper1 {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+
+.ico-wrapper2 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.ico-wrapper1 img {
+    width: 100%;
+}
+
+.ico-wrapper2 img {
+    width: 100%;
+}
+
+
+.ico2-wrapper {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-top: 5rem;
+
+}
+
+.ico-wrapper3 {
+    display: grid;
+    grid-template-columns: 1fr; 
+    margin-top: 1rem;
+}
+
+.ico-wrapper3 img {
+    width: 100%;
+}
+
+.ico-wrapper3 h3 {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--shadow);
+    font-size: var(--font-size-medium);
+}
+
+.ico-wrapper-box1 {
+
+    align-items: center;
+    margin: auto;
+    
+}
+
+.ico-wrapper-box1 h3 {
+    text-align: center;
+    color: var(--shadow);
+    text-transform: uppercase;
+    justify-items: center;
+    margin-top: 1rem;
+    font-size: var(--font-size-medium);
+}
+
+.ico-wrapper-box2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    text-align: center;
+    margin-top: 3.5rem;
+}
+
+.ico-wrapper-box2-icons {
+    width: 35%;
+    margin:auto auto;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.ico-wrapper-box2-icons-mobile {
+    width: 25%;
+    margin:auto auto;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.ico-wrapper-box2-icons:hover {
+    opacity: 0.9;
+}
+
+.ico-wrapper-box2-icons-mobile:hover {
+    opacity: 0.9;
+}
+
+.ico-icon-text {
+    font-size: var(--font-size-small);
+    color: var(--shadow);
+    opacity: 0.8;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    }
+
+    .ico-wrapper-box3 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    @media(max-width: 1400px) {
+
+@media(max-width: 1024px) {
+
+    .about-front-container {
+        -webkit-clip-path: none;
+        clip-path: none;
+
+    }
+    .about-front-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .about-front-text h3{
+        margin-top: 1.5rem;
+    }
+
+    .about-front-text p {
+        margin-top: 1.9rem; 
+    }
+
+    .mission-heading {
+        margin: 1rem auto 2rem auto;
+    }
+    .mission-about-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .roadmap-container {
+        height: 49rem;
+        -webkit-clip-path: none;
+        clip-path: none;
+        padding:2rem;
+
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .about-front-container {
+        height: 117rem;
+    }
+    .about-front-wrapper {
+        padding: 1rem;
+    }
+
+    .about-front-wrapper img {
+        margin-top: 9rem;
+        width: 70%;
+    }
+
+    .mission-about-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .mission-about p {
+        padding: 1rem;
+    }
+
+    .mission-about-image {
+        width: 100%;
+    }
+
+
+
+    .usecases-container {
+        height: 275rem;
+        margin-top: 24rem;
+        -webkit-clip-path: none;
+        clip-path: none;
+    }
+    .usecases-wrapper {
+        flex-direction: column;       
+    }
+
+    .usecases-nested {
+        height: 40rem;
+        width: 40rem;
+        
+    }
+
+    .usecasepic {
+        height: 30rem;
+        width: 100%;
+        overflow: hidden;
+    }
+
+   
+
+    .roadmap-icons {
+        width: 50%;
+    }
+    .ico-container {
+        padding: 6rem;
+    }
+
+    .ico-header {
+        margin-top: 2rem;
+    }
+
+    
+
+    .footer-wrapper {
+        margin-top: 2rem;
+    }
+}
+
+
+@media (max-width:500px) {
+
+    .about-front-container {
+        height: 135rem;
+        padding: 1rem;
+    }
+
+    
+    .mission-about {
+        height: 122rem;
+        padding: 1rem;
+    }
+    .mission-about-wrapper {
+        padding: 0;
+        margin: 0;
+    }
+
+    .mission-about-image {
+        height: 36rem;
+        padding: 3rem;
+    }
+
+    .usecases-container {
+        -webkit-clip-path: none;
+        clip-path: none;
+        height: 270rem;
+
+    }
+
+    .usecases-nested {
+        margin: 1rem 5rem;
+    }
+
+    .usecases-container h3 {
+        padding-top: 3rem;
+    }
+
+    .roadmap-container {
+        height: 50rem;
+    }
+
+    .roadmap-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .roadmap-icons {
+        flex-direction: row;
+        margin-bottom: 2rem;
+    }
+    .ico-wrapper1 {
+        grid-template-columns: 1fr;
+    }
+
+    .ico-wrapper2 {
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+
+    .ico2-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 360px) {
+
+    .about-front-container {
+        height: 153rem;
+
+    }
+
+    .mission-about {
+        height: 129rem;
+    }
+
+    .usecases-container {
+        padding: 10rem;
+        height:280rem;
+    }
+}
+}

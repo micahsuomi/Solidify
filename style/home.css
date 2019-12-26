@@ -1,0 +1,740 @@
+
+
+/*Landing*/
+.profile-container {
+    padding: 7rem;
+    margin-top: 2rem;
+}
+
+.profile-header {
+    color: white;
+}
+
+.icon-wrapper {
+    padding: 2rem;
+}
+
+.icon-profile {
+    width: 70%;
+}
+
+
+/*Home*/
+.scroll-container {
+
+    width: 100%;
+    height: 100%;
+    /*CSS Smooth Scroll */
+    overflow-y: scroll;
+    scroll-behavior: smooth; 
+    scroll-snap-type: y mandatory;
+    overflow: hidden;
+}
+
+
+
+.front-container {
+    
+
+    position: relative;
+    background-image: linear-gradient(to right bottom, rgba(57, 72, 102, 0.5), rgba(24, 23, 26, 0.8)), 
+    url("../imgs/adult-bitcoin-blockchain-1037914.jpg");
+    background-size:cover;
+    background-position: top;
+    height: 100vh;
+    width: 100%;
+    -webkit-clip-path: polygon(0 0, 97% 0, 85% 100%, 0 100%);
+    clip-path: polygon(0 0, 97% 0, 85% 100%, 0 100%);
+
+}
+
+.front-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+   }
+
+
+.header-container .front-logo {
+    width: 10%;
+    display: inline-block;
+  
+}
+
+.title {
+    display: block;
+    color:var(--very-light);
+    font-weight: 400;
+    font-size: var(--font-size-big);
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    margin-top: 2rem;
+
+    
+}
+
+
+.subtitle {
+    display: block;
+    margin-top: 10px;
+    color: var(--very-light);
+    font-weight: 400;
+    letter-spacing: 5px;
+    font-size: var(--font-size-medium);
+   
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.3rem;
+}
+
+.btn-red {
+    background: rgb(190, 80, 80);
+    width: 30px;
+    height: 30px;
+    margin: 0.4rem;
+    border: none;
+    border-radius: 25px;
+    
+}
+
+.btn-red:hover {
+    background: rgb(199, 103, 103);
+    cursor: pointer;
+}
+
+.button-container .fas {
+    color: #fff;
+}
+.about-container {  
+    padding: 12rem;
+}
+
+.nested .about-header {
+    margin-top: 3rem;
+}
+.about-wrapper {
+    display: grid;
+    grid-template-columns:repeat(2,1fr); 
+    grid-auto-rows: minmax(400px, auto);
+    grid-gap: 3.6rem;
+    padding: 5rem;
+    align-items:center;
+    text-align: center;
+}
+
+.about-image-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    height: 100%;
+    padding: 6rem;
+
+
+}
+
+.about-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 2rem 4rem rgb(24, 23, 26, 0.2);
+}
+
+.about-header {
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.about-header {
+    color:var(--shadow);
+    text-align: center;
+    font-size: var(--font-size-medium);
+
+}
+
+
+.about-text {
+    color: var(--grey-text);
+    font-size: var(--font-size-small);
+    margin-top: 4rem;
+    text-align: left;
+
+}
+
+.value-wrapper {
+    display: grid;
+    grid-template-columns:repeat(2,1fr); 
+    grid-auto-rows: minmax(400px, auto);
+    grid-gap: 2rem;
+    padding: 5rem;
+    margin-top: 7rem;
+    align-items: center;
+    text-align: center;
+}
+
+
+.view img {
+    width: 80%;
+}
+
+
+/* Services */
+
+.services {
+    padding: 10rem;
+}
+.services-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+    padding: 6rem;
+    
+
+}
+
+.service {
+    text-align: center;
+    padding: 5rem;
+    background: var(--very-light);
+    box-shadow: var(--dark);
+    border-radius: 10px;
+    height: 30rem;
+}
+
+.service .fas {
+    color:var(--shadow);
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.service .fab {
+    color:var(--shadow);
+    opacity: 0.9;
+    cursor: pointer;
+
+}
+.service h3 {
+    padding: 1.2rem;
+    color:var(--shadow);
+    font-size: var(--font-size-small);
+}
+.service p {
+    line-height: 1.6;
+    color: var(--grey-text);
+    font-size: var(--font-size-small);
+}
+
+
+/* Team */
+.team-container {
+    background: var(--very-light);
+    margin-top: 4rem;
+    padding: 10rem;
+    height: 100vh;
+
+}
+.team-heading {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--shadow);
+    font-size: var(--font-size-medium);
+}
+.team-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: minmax(400px, auto);
+    grid-gap: 1rem; 
+    margin-top:2rem;
+    text-align: center;
+    
+}
+
+.nested1 {
+    display: grid;
+    grid-auto-flow: repeat(2,1fr);
+    justify-content: center;
+
+}
+.nested1-view {
+    
+    background: url("../imgs/team1.jpg")no-repeat center center/cover;
+    background-size: cover;
+    height: 35rem;
+    width: 30rem;
+    border-radius: 3px;
+   
+}
+
+.nested-team-name {
+    margin-top: 1rem;
+    color: var(--shadow);
+    font-weight: 700;
+    font-size: var(--font-size-small);
+
+}
+
+.nested-team-role {
+    color: var(--grey-text);
+    font-size: var(--font-size-small);
+}
+
+.nested1 a:hover {
+    color: skyblue;
+}
+.nested2 {
+    display: grid;
+    grid-auto-flow: repeat(2,1fr);
+    justify-content: center;
+}
+.nested2-view {
+    
+    background: url("../imgs/team2.jpg")no-repeat center center/cover;
+    background-size: cover;
+    height: 35rem;
+    width: 30rem;
+    justify-content: center;
+    align-content: center;
+    border-radius: 3px;   
+}
+
+
+.nested2 a:hover {
+    color: skyblue;
+}
+
+.nested3 {
+    display: grid;
+    grid-auto-flow: repeat(2,1fr);
+    justify-content: center;
+
+}
+.nested3-view {
+    
+    background: url("../imgs/team3.jpg")no-repeat center center/cover;
+    background-size: cover;
+    height: 35rem;
+    width: 30rem;
+    justify-content: center;
+    align-content: center;
+    border-radius: 3px;
+}
+
+.nested3 a:hover {
+    color: skyblue;
+}
+
+
+/*APP*/
+
+.get-app-container {
+    background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
+    height: 80vh;
+    padding: 12rem;
+
+
+}
+.get-app-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 0;
+    padding: 2rem;
+    /* background: var(--dark); */
+    align-items: center;
+     
+}
+
+
+.wallet-phone {
+    width: 35%;
+    
+}
+
+.nested-app {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:-2rem;
+    align-items: center;
+    align-content: end;
+}
+
+.nested-app img {
+    width: 75%;
+    cursor: pointer;
+    margin: 0 0 0 3rem;
+}
+
+.nested5 {
+        
+        padding: 13rem;
+        justify-content: center;
+        text-align:center;
+        align-items: center;
+        
+}
+
+.nested5 h2 {
+    color: var(--very-light);
+    text-transform:uppercase;
+    font-weight: 400;
+}
+.team-wrapper .fab {
+    margin-top: 0.7rem;
+}
+
+.appstore-button {
+    margin-top: 1rem;
+    cursor: pointer;
+    width: 30%;
+}
+
+.appstore-button-2 {
+    margin-top: 1rem;
+    cursor: pointer;
+    width: 33%;
+}
+
+
+
+.blocks {
+    animation: move 2s infinite alternate;
+    
+}
+
+
+
+ 
+    
+    
+
+/* Blocks Animation */
+@keyframes move {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+    }
+
+
+/* Media Queries */
+
+@media(max-width: 1400px) {
+   
+
+
+@media(max-width: 1024px) {
+    
+    
+.front-container {
+    height: 40vh;
+    text-align: center;
+}
+
+.about-container {
+    padding: 5rem;
+}
+
+.about-wrapper {
+    grid-template-columns: 1fr;
+}
+
+
+    
+ .services-wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            }
+
+.team-container {
+             height: 55vh;
+             padding: 8rem;
+            }
+
+.get-app-container {
+            height: 33vh;
+            padding: 7rem;
+            }
+
+
+    }
+.blocks {
+        width: 30px;
+        animation: move 2s infinite alternate;
+    }
+
+   
+    @keyframes move {
+        0% {
+            transform: translateY(0px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+        
+    }
+   
+    .header-container img  {
+        width: 20px;
+        display: block;
+    }
+
+    
+
+    .front-wrapper .title {
+        text-align: center;
+        font-size: 1.9em;
+    }
+
+    .front-wrapper .subtitle {
+        text-align: center;
+        font-size: 0.9em;
+    }
+
+
+
+@media(max-width: 850px) {
+    
+
+    .blocks {
+        width: 30px;
+
+        animation: move 2s infinite alternate;
+    }
+    
+    @keyframes move {
+        0% {
+            transform: translateY(0px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }     
+        .front-wrapper {
+            text-align: center;
+        }
+    
+        .front-wrapper .front-logo {
+            width: 8%;
+            
+        }
+    
+        .front-wrapper .title {
+           
+            font-size: 1.8em;
+        }
+       
+        
+        .services-wrapper {
+            grid-template-columns: repeat(2,1fr);
+            margin-top: -10rem;
+        }
+    }
+
+
+@media(max-width: 768px) {
+    
+
+    
+    .front-container {
+        
+        padding-top: 5rem;
+
+    }
+
+    .header-container {
+        margin-top: .1rem;
+    }
+    
+    .front-wrapper .front-logo {
+        width: 10%;
+        
+    }
+
+    .about-container {
+        padding: 3rem;
+    }
+
+
+    .view img {
+        width: 70%;
+    }
+    .value-container {
+        margin-top: 3rem;
+    }
+
+    .value-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .services-wrapper {
+        margin-top: 2rem;
+    }
+
+    .team-container {
+        padding: 1rem;
+    }
+
+    .team-heading {
+        margin-top: 2rem;
+    }
+
+}
+
+} 
+@media(max-width: 500px) {
+
+   
+    .front-container {
+        -webkit-clip-path: none;
+        clip-path: none;
+        height: 100vh;
+
+    }
+    .front-wrapper {
+        margin-top: 0;
+        top: 60%;
+        text-align: center;
+
+    }
+   
+    .front-wrapper .front-logo {
+        width: 10%;
+        
+
+    }
+
+    .front-wrapper .title {
+        font-size: 1.6em;
+        
+    }
+
+    .front-wrapper .subtitle {
+        font-size: 0.8;
+
+    }
+
+    .btn-red {
+        height: 25px;
+        width: 25px;
+        margin-top: 1rem;
+    }
+
+    .button-container .fas {
+        text-align: center;
+    }
+   
+    
+    .view {
+        display: block;
+        height: 20rem;
+        
+        
+    }
+
+    .about-container {
+        padding: 2rem;
+    }
+
+    .about-wrapper {
+        padding: 1rem;
+    }
+
+    .value-wrapper {
+        padding: 2rem;
+    }
+    .view {
+        align-items: center;
+    }
+    .view img {
+        width: 80%;
+    }
+
+    
+    
+    .value-wrapper .view2 {
+        width: 80%;
+        display: block;
+        
+    }
+
+    
+
+
+    .services-container {
+        padding: 0;
+    }
+
+    .services-wrapper {
+        padding: 1rem;
+    }
+    .services-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .service {
+        padding: 1.5rem;
+        width: 100%;
+        display: block;
+    }
+
+
+
+    .team-container {
+        height: 185rem;
+        padding: 3rem;
+    }
+    .team-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .get-app-container {
+        height: 200rem;
+    }
+    .get-app-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center; 
+
+    }
+
+    .nested-app {
+        grid-template-columns: 1fr;
+        grid-gap: 4rem;
+
+    }
+
+    .nested5 {
+        padding: 5rem;
+    }
+
+    
+
+    
+    .blocks {
+        width: 80px;        
+        animation: move 2s infinite alternate;
+    }
+
+}
+
+@media(max-width: 320px) {
+    .services {
+        padding: 4rem;
+    }
+
+    .service {
+        height: 29rem;
+        width: 100%;
+        padding: 3rem;  
+
+    }
+
+    .get-app-container {
+        height: 170rem;
+    }
+}
+   
