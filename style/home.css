@@ -123,6 +123,8 @@
     margin: .7em;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+
 
 }
 
@@ -754,6 +756,12 @@
 }
 
 @media(max-width: 320px) {
+
+    .price-wrapper {
+        flex-direction: column;
+    }
+
+   
     .services {
         padding: 4rem;
     }
