@@ -1,25 +1,11 @@
-//option 2 jquery smooth scroll
-
-$(".navbar a").on("click", function(e) {
-     if(this.hash !=="") {
-         e.preventDefault();
-
-         const hash = this.hash;
-
-         $("html, body").animate(
-         {
-             scrollTop: $(hash).offset().top
-         },
-         800
-         );
-     }
- });
 
  // scrollreveal
 ScrollReveal().reveal('.headline');
 ScrollReveal().reveal('.tagline', { delay: 500 })
 ScrollReveal().reveal('.punchline', { delay: 1000})
 ScrollReveal().reveal('.punchline2', { delay: 2000})
+
+
 
 // toggle navbar
 var hamburger = document.querySelector('.hamburger-bar');
@@ -265,17 +251,8 @@ function outsideClick6(e) {
 
 
 
-/*var showIn = document.getElementById('partnerImg');
+//app page wallet ID generator
 
-showIn.addEventListener('click', openName);
 
-function openName() {
-    alert('working');
-}*/
 
-var nextSlide = document.getElementById('next');
-nextSlide.addEventListener('click', slide2);
 
-function slide2() {
-    console.log('next');
-}

@@ -20,6 +20,12 @@
     <p>ETH</p>
     <p>USD: <span class="eth-price-usd"></span></p>
     <p>EUR: <span class="eth-price-eur"></span></p>
+
+
+    <h1>Available Coin List</h1>
+    <p>Name: <span class="coin-name"></span></p>
+    <p>Symbol: <span class="coin-symbol"></span></p>
+
 </body>
 
 
@@ -74,6 +80,9 @@ const multipleSymbolsPrice = () => {
 
 multipleSymbolsPrice();
 
+const coinName = document.querySelector('.coin-name');
+const coinSymbol = document.querySelector('.coin-symbol');
+
 
 const getCoinsData = () => {
     fetch(`https://min-api.cryptocompare.com/data/blockchain/list?api_key=${API_KEY}`)
@@ -86,6 +95,7 @@ const getCoinsData = () => {
         const getData = data.Data;
         console.log(getData);
         return getData;
+        coinName.innerHTML = getData.symbol;
 
         
     })

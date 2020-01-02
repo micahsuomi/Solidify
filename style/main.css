@@ -185,6 +185,7 @@ nav {
 
 .social-media {
     display:flex;
+    align-items: center;
 }
 
 .social-media h5 {

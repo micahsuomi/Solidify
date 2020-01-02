@@ -19,7 +19,7 @@
 
 <div class="scroll-container">
     <nav>
-        <div class="logo-header hide-desktop show-mobile"><img src="../imgs/logo3.png"></div>
+        <div class="logo-header hide-desktop show-mobile"><a href="../index.html"><img src="../imgs/logo3.png" alt="logo"></a></div>        
         <div class="hamburger-bar hide-desktop show-mobile">
             <i class="fas fa-bars fa-4x"></i>
           </div>
@@ -119,18 +119,23 @@
                     <div class="dotted-line">
                     </div>
                         <ul>
-                       <li><img src="../imgs/binance.png" alt=""></li>
-                       <li><img src="../imgs/huobi.png" alt=""></li>
-                       <li><img src="../imgs/bittrex.png" alt=""></li>
-                       <li><img src="../imgs/myetherwallet.png" alt=""></li>
+                       <li><a href="https://www.binance.com/en" target="blank"><img src="../imgs/binance.png" alt="binance exchange"></a></li>
+                       <li><a href="https://www.huobi.com/en-us/" target="blank"></a><img src="../imgs/huobi.png" alt="huobi exchange"></a></li>
+                       <li><a href="https://global.bittrex.com/" target="blank"></a><img src="../imgs/bittrex.png" alt="bittrex exchange"></a></li>
+                       <li><a href="https://www.myetherwallet.com/" target="blank"></a><img src="../imgs/myetherwallet.png" alt="myetherwallet"></a></li>
                     </ul>
                     </div>
                 </div>
             </div>
 
+            <div class="generate-walletID__container">
+                <div class="generate-walletID__wrapper">
+                <h2 class="generate-walletID__header">Generate Here Your Wallet App ID</h2>
+                <p class="wallet-id__paragraph">Wallet ID: <span class="user-id" id="wallet-id"></span></p>
+                <p class="success-paragraph"><span class="success"></span></p>
+                <button class="btn-generate-id">Generate Wallet ID</button>
             </div>
         </div>
-    </div>
         <footer class="footer">
             <div class="footer-wrapper">
                 <div class="logo-footer-header">
@@ -147,10 +152,11 @@
     
             </div>
         </footer>
+    </div>
+
                
-            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         
-            <script src="main.js">        </script>
+            <script src="../js/app.js"></script>
             
             </body>
             </html>

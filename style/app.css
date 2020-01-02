@@ -151,7 +151,6 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             margin-top: 5rem;
-            height: 80vh;
         } 
 
         .bluewrapper {
@@ -224,12 +223,7 @@
             font-size: var(--font-size-medium);
         }
 
-        /* .dotted-line {
-            width: 3px;
-            height: 10rem;
-            color: black;
-            transform: skewY(90deg);
-        } */
+    
         .connect-whitewrapper ul {
             list-style: none;
             margin-top: 2rem;
@@ -238,6 +232,55 @@
             width: 50%;
             margin-top: 1rem;
             opacity: 0.7;
+        }
+
+        .generate-walletID__container {
+            padding: 4em 8em;
+            background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
+        }
+
+        .generate-walletID__wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            justify-items: center;
+            align-items: center;
+            line-height: 2.2;
+        }
+
+        .generate-walletID__header {
+            font-size: var(--font-size-medium);
+            color: white;
+        }
+
+        .wallet-id__paragraph {
+            font-size: var(--font-size-medium)
+        }
+
+        .success {
+            color: var(--shadow);
+            font-size: var(--font-size-small);
+        }
+        .user-id {
+            font-size: var(--font-size-medium);
+        }
+
+        .btn-generate-id {
+            background-color: var(--shadow);
+            padding: 1.2em;
+            border-radius: 3px;
+            width: 14em;
+            color: white;
+            border: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: var(--font-size-small);
+            cursor: pointer;
+        }
+
+        .btn-generate-id:hover {
+            background-color: var(--dark);
+            transform: translateY(-.1em);
         }
 
         #footer-app {
