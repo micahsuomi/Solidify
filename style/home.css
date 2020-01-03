@@ -35,18 +35,18 @@
 
 .front-container {
     
-
     position: relative;
-    background-image: linear-gradient(to right bottom, rgba(57, 72, 102, 0.5), rgba(24, 23, 26, 0.8)), 
-    url("../imgs/adult-bitcoin-blockchain-1037914.jpg");
+    background-image: linear-gradient(to right bottom, rgba(15, 14, 14, 0.5), rgba(20, 19, 22, 0.8)), 
+    url("../imgs/architecture-black-and-white-dark-2081166.jpg");
     background-size:cover;
-    background-position: top;
+    background-position: center;
     height: 100vh;
     width: 100%;
     -webkit-clip-path: polygon(0 0, 97% 0, 85% 100%, 0 100%);
     clip-path: polygon(0 0, 97% 0, 85% 100%, 0 100%);
 
 }
+
 
 .front-wrapper {
     position: absolute;
@@ -63,9 +63,13 @@
   
 }
 
+.enlarge {
+    display: none;
+}
+
 .title {
     display: block;
-    color:var(--very-light);
+    color: white;
     font-weight: 400;
     font-size: var(--font-size-big);
     letter-spacing: 20px;
@@ -79,7 +83,7 @@
 .subtitle {
     display: block;
     margin-top: 10px;
-    color: var(--very-light);
+    color:  white;
     font-weight: 400;
     letter-spacing: 5px;
     font-size: var(--font-size-medium);
@@ -90,20 +94,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1.3rem;
+    margin-top: 2.3rem;
 }
 
-.btn-red {
-    background: rgb(190, 80, 80);
+.btn-circle,
+.btn-cube,
+.btn-ball {
+    background: skyblue;
     width: 30px;
     height: 30px;
     margin: 0.4rem;
     border: none;
     border-radius: 25px;
+    cursor: pointer;
     
 }
 
-.btn-red:hover {
+.btn-circle:hover,
+.btn-cube:hover,
+.btn-ball:hover {
     background: rgb(199, 103, 103);
     cursor: pointer;
 }

@@ -1,4 +1,6 @@
 
+AOS.init();
+
  // scrollreveal
 ScrollReveal().reveal('.headline');
 ScrollReveal().reveal('.tagline', { delay: 500 })
@@ -29,6 +31,22 @@ closeNav.addEventListener('click', function(e) {
     console.log('working')
     e.preventDefault();
 });
+
+//change background color
+const frontContainer = document.querySelector('.front-container');
+const btnCircle = document.querySelector('.btn-circle');
+const btnCube = document.querySelector('.btn-cube');
+const btnBall = document.querySelector('.btn-ball');
+const logo = document.querySelector('.header-container .front-logo');
+const subtitle = document.querySelector('.subtitle');
+
+btnCircle.addEventListener('click', changeText = () => {
+    btnCube.style.backgroundColor = 'lightblue';
+    logo.classList.add('grow');
+    subtitle.innerHTML = "Check Our Services"
+
+})
+
 
 
 //fetch aPI data for btc and eth price on hero section

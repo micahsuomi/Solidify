@@ -71,6 +71,14 @@ body {
     display: none;
 }
 
+.change {
+    opacity: 0;
+}
+
+.appear {
+    opacity: 1;
+}
+
 .scroll-container {
 
         min-height: 100%;
@@ -211,6 +219,7 @@ nav {
     font-size: var(--font-size-small);
 
 }
+
 
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.1); }
