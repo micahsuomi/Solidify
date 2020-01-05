@@ -37,7 +37,7 @@
     
     position: relative;
     background-image: linear-gradient(to right bottom, rgba(15, 14, 14, 0.5), rgba(20, 19, 22, 0.8)), 
-    url("../imgs/architecture-black-and-white-dark-2081166.jpg");
+    url("../imgs/imageedit_3_7657893190.jpg");
     background-size:cover;
     background-position: center;
     height: 100vh;
@@ -408,7 +408,7 @@
 .nested-app img {
     width: 75%;
     cursor: pointer;
-    margin: 0 0 0 3rem;
+    margin: 0;
 }
 
 .nested5 {

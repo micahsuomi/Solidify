@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../style/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat: 400,700; Roboto:400,700" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
 		ScrollReveal({ duration: 1000 })
@@ -39,10 +40,41 @@
 
     
             <div class="front-app-container">
+
                 <div class="front-app-wrapper">
-                    <div><img src="../imgs/app1.png" class="app1" alt=""></div>
-                    <div><img src="../imgs/app2.png" class="app2" alt=""></div>
-                    <div><img src="../imgs/app3.png" class="app3" alt=""></div>
+
+                    <div class="front-app-wrapper__left">
+
+                    <div><img src="../imgs/app1.png" class="app-img" alt="app design"></div>
+                    <div><img src="../imgs/app2.png" class="app-img" alt="app design"></div>
+                    <div><img src="../imgs/app3.png" class="app-img" alt="app design"></div>
+                </div>
+
+               
+                    <div class="btc-eth-price__wrapper">
+                        <h2 class="front-app-header">Live Cryptocurrencies Prices</h2>
+                        <div class="price-wrapper">
+                            <h2>BTC Price</h2> 
+                                <p>USD: <span class="btc-usd"></span></p>
+                                <p>JPY: <span class="btc-jpy"></span></p>
+                                <p>EUR: <span class="btc-eur"></span></p>
+                            </div>
+                        <div class="price-wrapper">
+                            <h2>BTC and ETH Price</h2>
+                            <div class="btc-eth">
+                            <div>
+                        <p>Bitcoin</p>
+                        <p>USD: <span class="btc-price-usd"></span></p>
+                        <p>EUR: <span class="btc-price-eur"></span></p>
+                    </div>
+                    <div>
+                        <p>Ethereum</p>
+                        <p>USD: <span class="eth-price-usd"></span></p>
+                        <p>EUR: <span class="eth-price-eur"></span></p>
+                    </div>
+                    </div>
+                    </div>
+                </div>
 
                 </div>
                 
@@ -56,7 +88,8 @@
                         <img src="../imgs/forward2.png" class="arrow-icon" alt="">
                     </div>
                     <div class="wallet-app-text1">
-                        <h3>Our Wallet App</h3>
+                        <h3>Secure Digital Identity</h3>
+
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea facere praesentium quod! Dolores accusamus commodi illum excepturi at delectus vel eum, veniam modi asperiores, vitae nesciunt eaque consequuntur, dolor culpa quis impedit et in vero? Aliquid commodi, facere illum quas rerum quos placeat quia adipisci soluta fuga sequi! Dolor tenetur nesciunt autem voluptates ducimus nobis corporis eaque quaerat, qui nihil, fuga est commodi iusto obcaecati, provident doloribus aspernatur. Iure iste voluptatum adipisci harum iusto consequuntur placeat soluta molestiae facilis? Autem.<br><br>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas omnis quo qui hic, debitis tenetur ducimus provident ea quam commodi, laudantium esse excepturi, mollitia quisquam? Quis ipsam deleniti harum similique consectetur. Dolor illo dignissimos non temporibus deleniti minima, ratione culpa consequuntur exercitationem mollitia pariatur!</p>
                     </div>
@@ -66,7 +99,7 @@
                 <div class="description-app-container2">
                 <div class="description-app-wrapper2">
                     <div class="wallet-app-text2">
-                        <h3>Our Wallet App</h3>
+                        <h3>Decentralized, P2P transfers</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea facere praesentium quod! Dolores accusamus commodi illum excepturi at delectus vel eum, veniam modi asperiores, vitae nesciunt eaque consequuntur, dolor culpa quis impedit et in vero? Aliquid commodi, facere illum quas rerum quos placeat quia adipisci soluta fuga sequi! Dolor tenetur nesciunt autem voluptates ducimus nobis corporis eaque quaerat, qui nihil, fuga est commodi iusto obcaecati, provident doloribus aspernatur. Iure iste voluptatum adipisci harum iusto consequuntur placeat soluta molestiae facilis? Autem.<br><br>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas omnis quo qui hic, debitis tenetur ducimus provident ea quam commodi, laudantium esse excepturi, mollitia quisquam? Quis ipsam deleniti harum similique consectetur. Dolor illo dignissimos non temporibus deleniti minima, ratione culpa consequuntur exercitationem mollitia pariatur!</p>
                     </div>
@@ -78,11 +111,17 @@
                 </div>
             </div>
         </div>
+        <div class="volumes-container">
+            <h1 class="top-volume-title">Top Volume Cryptocurrencies</h1>
+            <div id="volumes-wrapper"></div>
+        </div>
+
+
         <div class="app2-container">
                 <div class="app2-wrapper">
-                        <div><img src="../imgs/app4.png" class="app4 grow" alt=""></div>
-                        <div><img src="../imgs/app5.png" class="app5 grow" alt=""></div>
-                        <div><img src="../imgs/app6.png" class="app6 grow" alt=""></div>
+                        <div><img src="../imgs/app4.png" class="app-img app4 grow" alt=""></div>
+                        <div><img src="../imgs/app5.png" class="app-img app5 grow" alt=""></div>
+                        <div><img src="../imgs/app6.png" class="app-img app6 grow" alt=""></div>
     
                     </div>
 
@@ -121,9 +160,9 @@
                     </div>
                         <ul>
                        <li><a href="https://www.binance.com/en" target="blank"><img src="../imgs/binance.png" alt="binance exchange"></a></li>
-                       <li><a href="https://www.huobi.com/en-us/" target="blank"></a><img src="../imgs/huobi.png" alt="huobi exchange"></a></li>
-                       <li><a href="https://global.bittrex.com/" target="blank"></a><img src="../imgs/bittrex.png" alt="bittrex exchange"></a></li>
-                       <li><a href="https://www.myetherwallet.com/" target="blank"></a><img src="../imgs/myetherwallet.png" alt="myetherwallet"></a></li>
+                       <li><a href="https://www.huobi.com/en-us/" target="blank"><img src="../imgs/huobi.png" alt="huobi exchange"></a></li>
+                       <li><a href="https://global.bittrex.com/" target="blank"><img src="../imgs/bittrex.png" alt="bittrex exchange"></a></li>
+                       <li><a href="https://www.myetherwallet.com/" target="blank"><img src="../imgs/myetherwallet.png" alt="myetherwallet"></a></li>
                     </ul>
                     </div>
                 </div>
@@ -156,8 +195,10 @@
     </div>
 
                
-        
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
             <script src="../js/app.js"></script>
+            <script src="../js/main.js"></script>
+
             
             </body>
             </html>

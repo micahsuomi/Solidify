@@ -2,7 +2,6 @@
         /*App*/
 
         .front-app-container {
-            height: 100vh;
             width: 100%;
             padding: 12rem;
             background-image: linear-gradient(to right, rgb(236, 119, 171) 0%, rgb(120, 115, 245) 100%);
@@ -14,35 +13,64 @@
 
         .front-app-wrapper {
             display: grid;
-            grid-template-columns:repeat(3,1fr);
+            grid-template-columns:repeat(2,1fr);
             grid-gap: 1rem;
-            text-align: center;
             justify-items: center;
+            margin-top: 2em;
         }
 
-        .front-app-wrapper .app1 {
-            justify-self:end;
-            margin-left: 8rem;
+        .front-app-header {
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
         }
 
-        .front-app-wrapper .app3 {
-            margin-right: 8rem;
+        .front-app-wrapper .app-img {
+            width: 100%;
         }
 
         .front-app-wrapper-2 {
             background-color: white;
-            padding: 3rem;
         }
 
-        .top-volume-paragraph {
-            font-size: var(--font-size-small);
+        .front-app-wrapper__left {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: .7em;
         }
+
+        .btc-eth-price__wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .price-wrapper {
+            background-image: linear-gradient(to right, rgb(173, 74, 119, 0.1) 0%, rgb(120, 115, 245) 1%);
+            border-radius: 5px;
+            padding: 3em;
+            
+        }
+
+        .price-wrapper h2 {
+            font-size: var(--font-size-medium);
+        }
+        .price-wrapper p,h2 {
+            color: white;
+        }
+
+        .price-wrapper p {
+            font-size: var(--font-size-small);
+            margin-top: .4em;
+        }
+        /*description app*/
+
         .description-app-container {
             padding: 8rem; 
-            height: 55rem;
             align-items: center;
 
         }
+      
 
         .description-app-wrapper1 {
             display: grid;
@@ -82,10 +110,46 @@
             margin-top: 1.5rem;
         }
 
+        /*top volumes */
+
+        .volumes-container {
+            list-style: none;
+            padding: 2rem 2rem;
+            background-color: rgb(249, 255, 255);
+            margin-top: 4rem;
+
+        }
+
+        .top-volume-title {
+            margin-top: 5rem;
+            color: var(--shadow);
+            text-transform: uppercase;
+        }
+        #volumes-wrapper {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            color: rgb(27, 25, 43);
+            padding: .5em;
+            margin-top: 4rem;
+        }
+
+        .margin {
+            margin-top: 1em;
+            font-size: var(--font-size-small);
+        }
+
+        .scale {
+            width: 15%;
+            border-radius: 50%;
+        }
+        /*description app 2*/
+
         .description-app-container2 {
             padding: 8rem;
             background: #8A9599;
-            height: 55rem;
 
 
         }
@@ -133,17 +197,12 @@
             background: url("../imgs/app2-background.png") no-repeat center center/cover;
             margin-top: 3rem;
             width: 100%;
-            height: 100vh;
         }
         .app2-wrapper {
             display: grid;
             grid-template-columns:repeat(3,1fr);
             grid-gap: 1rem;
             text-align: center;
-        }
-
-        .app2-wrapper img {
-            width: 60%;
         }
 
         .app2-wrapper .app4 {
@@ -299,20 +358,12 @@
         @media(max-width: 1024px) {
             .front-app-container {
                 height: 50%;
-                padding: 12rem 0;
+                padding: 12rem 4rem;
             }
 
-            .description-app-container {
-                height: 65rem;
-            }
+           
 
-            .description-app-container2 {
-                height: 65rem;
-            }
-            .app2-container {
-                height: 55rem;
-            }
-            
+           
         }
         @media(max-width:768px) {
 
@@ -406,9 +457,7 @@
                 margin-bottom: 2rem;
             }
 
-            .description-app-container2 {
-                height: 66vh;
-            }
+          
             .blue-nested1 {
                 grid-template-columns: 1fr;
                 justify-items: center;
@@ -425,12 +474,23 @@
                 width: 28%; 
             }
 
-            
+            .top-volume-title {
+                text-align: center;
+            }
+            #volumes-wrapper {
+                grid-template-columns: 1fr;
+                text-align: center;
+                justify-items: center;
+            }
             .blue-nested1 h3 {
                 margin-top: 2rem;
             }
             .blue-nested2 {
                 grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .generate-walletID__wrapper {
                 text-align: center;
             }
 

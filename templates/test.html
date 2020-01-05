@@ -4,27 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test Fetch</title>
+    <title>Crypto Live Prices</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+
+
+        .container {
+            padding: 2rem 0;
+            background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);                    }
+
+        .title {
+            text-align: center;
+        }
+
+        h2, p {
+            color: white;
+        }
+        .btc-prices {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            margin-top: 4rem;
+        }
+
+        .btc-eth {
+            display: flex;
+            justify-content: space-around;
+            margin-top:
+        }
+        .volumes-container {
+            list-style: none;
+            padding: 2rem 2rem;
+            background-color: rgb(249, 255, 255);
+            margin-top: 4rem;
+
+        }
+
+        .top-volume-title {
+            margin-top: 5rem;
+            color: darkslateblue;
+        }
+        #volumes-wrapper {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            color: rgb(27, 25, 43);
+            padding: .5em;
+            margin-top: 4rem;
+        }
+
+        .margin {
+            margin-top: 1em;
+        }
+
+        .scale {
+            width: 15%;
+            border-radius: 50%;
+        }
+
+        .bold {
+           
+            font-weight: 700;
+            
+        }
+    </style>
 </head>
 <body>
     
-    <h1>BTC Price</h1>
+    <div class="container">
+    <h1 class="title">Cryptocurrencies Prices and Volumes</h1>
+    <div class="btc-prices">
+        <div>
+    <h2>BTC Price</h2>
     <p>USD: <span class="btc-usd"></span></p>
     <p>JPY: <span class="btc-jpy"></span></p>
     <p>EUR: <span class="btc-eur"></span></p>
-
-    <h1>BTC and ETH Price</h1>
-    <p>BTC</p>
+</div>
+<div>
+    <h2>BTC and ETH Price</h2>
+    <div class="btc-eth">
+        <div>
+    <p>Bitcoin</p>
     <p>USD: <span class="btc-price-usd"></span></p>
     <p>EUR: <span class="btc-price-eur"></span></p>
-    <p>ETH</p>
+</div>
+<div>
+    <p>Ethereum</p>
     <p>USD: <span class="eth-price-usd"></span></p>
     <p>EUR: <span class="eth-price-eur"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="volumes-container">
+    <h1 class="top-volume-title">Top Volume Cryptocurrencies</h1>
+    <div id="volumes-wrapper"></div>
+
+    <ul id="volumes"></ul>
+</div>
 
 
-    <h1>Available Coin List</h1>
-    <p>Name: <span class="coin-name"></span></p>
-    <p>Symbol: <span class="coin-symbol"></span></p>
+    
+</div>
+   
 
 </body>
 
@@ -46,12 +139,10 @@ const ethMultipleEUR = document.querySelector('.eth-price-eur');
 const getBTCPrice = () => {
     fetch(`https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,JPY,EUR`)
     .then(result => {
-        console.log(result);
         return result.json();
 
     })
     .then(data => {
-        console.log(data)
         btcUSD.innerHTML = data.USD;
         btcJPY.innerHTML = data.JPY;
         btcEUR.innerHTML = data.EUR;
@@ -64,12 +155,10 @@ getBTCPrice();
 const multipleSymbolsPrice = () => {
     fetch(`https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH&tsyms=USD,EUR`)
     .then(result => {
-        console.log(result);
         return result.json();
 
     })
     .then(data => {
-        console.log(data)
         btcMultipleUSD.innerHTML = data.BTC.USD;
         btcMultipleEUR.innerHTML = data.BTC.EUR;
         ethMultipleUSD.innerHTML = data.ETH.USD;
@@ -87,13 +176,11 @@ const coinSymbol = document.querySelector('.coin-symbol');
 const getCoinsData = () => {
     fetch(`https://min-api.cryptocompare.com/data/blockchain/list?api_key=${API_KEY}`)
     .then(result => {
-        console.log(result);
         return result.json();
 
     })
     .then(data => {
         const getData = data.Data;
-        console.log(getData);
         return getData;
         coinName.innerHTML = getData.symbol;
 
@@ -103,20 +190,128 @@ const getCoinsData = () => {
 
 getCoinsData();
 
+/*
+const coinID = document.querySelector('.id');
+const coinImg = document.querySelector('.coin-img');
+const name = document.querySelector('.name');
+const symbol = document.querySelector('.symbol');
+const price = document.querySelector('.price');
+const open = document.querySelector('.openday');
+const volume = document.querySelector('.volume24h');*/
+const ul = document.getElementById('volumes');
+const div = document.getElementById('volumes-wrapper')
 
-const second = () => {
-    setTimeout(() => {
-        console.log('Async hi there');
-    }, 2000)
+const volumesContainer = document.getElementById('volumes-wrapper');
+const volumes = document.getElementById('volumes');
+const urlVolume = `https://min-api.cryptocompare.com/data/top/totalvolfull?limit=30&tsym=USD`;
+
+const createNode = (e) => {
+    return document.createElement(e);
 }
 
-const first = () => {
-    console.log('hi there');
-    second();
-    console.log('the end')
-}
-first()
+const append = (parent, el) => {
+    return parent.appendChild(el);
 
+}
+
+const topVolumesDisplayed = () => {
+    fetch(urlVolume)
+    .then(result => {
+        return result.json();
+    })
+    .then(data => {
+        console.log(data.Data);
+        let coins = data.Data;
+        return coins.map((coin) => {
+
+        let img = createNode('img'),
+            name = createNode('li'),
+            price = createNode('li'),
+            open = createNode('li'),
+            high = createNode('li'),
+            low = createNode('li'),
+            volume = createNode('li')
+            wrapper = createNode('div');
+            
+
+        name.innerHTML = coin.CoinInfo.FullName;
+        img.src = `https://www.cryptocompare.com${coin.CoinInfo.ImageUrl}`;
+        price.innerHTML = `Price: ${coin.RAW.USD.PRICE}`;
+        open.innerHTML = `Open: ${coin.RAW.USD.OPENDAY}`;
+        high.innerHTML = `High: ${coin.RAW.USD.HIGHDAY}`;
+        low.innerHTML = `Low: ${coin.RAW.USD.LOWDAY}`;
+        volume.innerHTML = `Volume 24H: ${Math.round(coin.RAW.USD.VOLUME24HOUR)}`;
+        append(div, img);
+        append(div, name)
+        append(div, price)
+        append(div, open)
+        append(div, high)
+        append(div, low)
+        append(div, volume)
+       
+        img.classList.add('scale')
+        name.classList.add('bold');
+        img.classList.add('margin')
+        price.classList.add('margin');
+        volume.classList.add('margin');
+        open.classList.add('margin');
+        high.classList.add('margin');
+        low.classList.add('margin');
+
+
+        })
+     
+
+    })
+};
+
+topVolumesDisplayed();
+
+const topVolumes = () => {
+    fetch(urlVolume)
+    .then(result => {
+        return result.json();
+    })
+    .then(data => {
+        console.log(data.Data);
+        let coins = data.Data;
+        return coins.map((coin) => {
+
+        let img = createNode('img'),
+            name = createNode('li'),
+            price = createNode('li'),
+            open = createNode('li'),
+            high = createNode('li'),
+            low = createNode('li'),
+            volume = createNode('li')
+            wrapper = createNode('div');
+            
+
+        name.innerHTML = coin.CoinInfo.FullName;
+        img.src = `https://www.cryptocompare.com${coin.CoinInfo.ImageUrl}`;
+        price.innerHTML = `Price: ${coin.RAW.USD.PRICE}`;
+        open.innerHTML = `Open: ${coin.RAW.USD.OPENDAY}`;
+        high.innerHTML = `High: ${coin.RAW.USD.HIGHDAY}`;
+        low.innerHTML = `Low: ${coin.RAW.USD.LOWDAY}`;
+        volume.innerHTML = `Volume 24H: ${Math.round(coin.RAW.USD.VOLUME24HOUR)}`;
+        append(ul, img);
+        append(ul, name)
+        append(ul, price)
+        append(ul, open)
+        append(ul, high)
+        append(ul, low)
+        append(ul, volume)
+       
+        img.classList.add('scale')
+        name.classList.add('bold');
+
+        })
+     
+
+    })
+};
+
+topVolumes();
 
 </script>
 </html>

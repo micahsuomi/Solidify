@@ -79,6 +79,10 @@ body {
     opacity: 1;
 }
 
+.bold {
+    font-weight: 700;
+}
+
 .scroll-container {
 
         min-height: 100%;
@@ -336,5 +340,12 @@ nav {
 
     .back-to-portfolio-link {
         margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .navbar-close {
+        top: 3%;
+        right: -2%;
     }
 }
