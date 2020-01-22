@@ -14,7 +14,7 @@ html {
 @media(max-width: 1250px) {
     html {
         font-size: 56%;
-    }
+    }   
 }
 
 @media(max-width: 800px) {
@@ -83,6 +83,9 @@ body {
     font-weight: 700;
 }
 
+.blue-text {
+    color: rgb(74, 133, 156);
+}
 .scroll-container {
 
         min-height: 100%;

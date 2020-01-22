@@ -1,10 +1,8 @@
 /*Team*/
 
 .team-members-container {
-    padding: 5rem;
+    padding: 10rem 5rem;
     background:url("../imgs/blur-crowd-indoors-950902.jpg") no-repeat center center/cover;
-    height: 100vh;  
-
     
 }
 
@@ -576,8 +574,7 @@
 
     /*TEAM VALUES*/
     .team-values-container {
-        padding: 8rem;
-        height: 50rem;
+        padding: 10rem 8rem;
         width: 100%;
     }
 
@@ -586,7 +583,7 @@
         text-align: center;
         font-weight: 400;
         font-size: var(--font-size-medium);
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
     .team-values-wrapper {
         display: grid;
@@ -709,9 +706,7 @@
 
     @media(max-width: 1024px) {
 
-        .team-members-container {
-            height: 80vh;
-        }
+      
 
         .team-rectangles-wrapper {
             grid-template-columns: repeat(3, 1fr);
@@ -738,17 +733,13 @@
            height: 50vh;
        }
 
-       .team-values-container {
-           height: 32vh;
-       }
+      
 
 
     }
     @media(max-width:768px) {
         
-        .team-members-container {
-            height: 85vh;
-        }
+        
         .team-mates-container {
             padding: 0;
         }
@@ -780,9 +771,7 @@
             text-align: left;
         }
 
-        .team-values-container {
-            height: 53vh;
-        }
+      
  
         .team-values-wrapper {
             grid-template-columns: repeat(2, 1fr);
@@ -804,7 +793,6 @@
 
         .team-members-container {
             padding: 7rem;
-            height: 398rem;
             
         }
         
@@ -862,9 +850,6 @@
             margin-top: 2rem;
         }
 
-        .team-values-container {
-            height: 90rem;
-        }
         .team-values-wrapper {
             grid-template-columns: 1fr;
             grid-gap: 3rem;
@@ -908,9 +893,7 @@
         .team-mates-description-container {
             height: 122rem;
         }
-
-        
-        
+ 
 
     }
 

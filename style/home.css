@@ -272,7 +272,42 @@
     font-size: var(--font-size-small);
 }
 
+/* Top market cap */
+.top-marketcap__container {
+    padding: 3em;
+}
 
+.top-marketcap__header {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--shadow);
+
+}
+
+.top-marketcap__subheader {
+    margin-top: 3em;
+}
+
+#top-marketcap__wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    color: var(--shadow);
+    padding: .5em;
+    margin-top: 4rem;
+}
+
+.margin {
+    margin-top: 1em;
+    font-size: var(--font-size-small);
+}
+
+.scale {
+    width: 15%;
+    border-radius: 50%;
+}
 /* Team */
 .team-container {
     background: var(--very-light);

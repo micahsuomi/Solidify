@@ -56,23 +56,98 @@ const ethMultipleUSD = document.querySelector('.eth-price-usd');
 const ethMultipleEUR = document.querySelector('.eth-price-eur');
 
 const multipleSymbolsPrice = () => {
-    fetch(`https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH&tsyms=USD,EUR`)
+        fetch(`https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH&tsyms=USD,EUR`)
+        .then(result => {
+            console.log(result);
+            return result.json();
+    
+        })
+        .then(data => {
+            console.log(data)
+            btcMultipleUSD.innerHTML = data.BTC.USD;
+            btcMultipleEUR.innerHTML = data.BTC.EUR;
+            ethMultipleUSD.innerHTML = data.ETH.USD;
+            ethMultipleEUR.innerHTML = data.ETH.EUR;
+    
+        })
+   
+};
+
+multipleSymbolsPrice();
+
+//display top marketCap APIs
+
+let div = document.getElementById('top-marketcap__wrapper');
+const urlTopMarketCap = `https://min-api.cryptocompare.com/data/top/mktcapfull?limit=20&tsym=USD`;
+
+const createNode = (e) => {
+    return document.createElement(e);
+}
+
+const append = (parent, el) => {
+    return parent.appendChild(el);
+
+}
+
+const topMarketCapDisplayed = () => {
+    fetch(urlTopMarketCap)
     .then(result => {
         console.log(result);
         return result.json();
 
     })
     .then(data => {
-        console.log(data)
-        btcMultipleUSD.innerHTML = data.BTC.USD;
-        btcMultipleEUR.innerHTML = data.BTC.EUR;
-        ethMultipleUSD.innerHTML = data.ETH.USD;
-        ethMultipleEUR.innerHTML = data.ETH.EUR;
+        console.log(data.Data);
+        let coins = data.Data;
+        return coins.map((coin) => {
+
+        let img = createNode('img'),
+            name = createNode('li'),
+            price = createNode('li'),
+            lastMarket = createNode('li'),
+            high = createNode('li'),
+            low = createNode('li'),
+            marketCap = createNode('li'),
+            supply = createNode('li'),
+            wrapper = createNode('div');
+            
+
+        name.innerHTML = coin.CoinInfo.FullName;
+        img.src = `https://www.cryptocompare.com${coin.CoinInfo.ImageUrl}`;
+        price.innerHTML = `Price: $${coin.RAW.USD.PRICE}`;
+        marketCap.innerHTML = `Market Cap: ${Math.round(coin.RAW.USD.MKTCAP)}`;
+        lastMarket.innerHTML = `Last Market${coin.RAW.USD.LASTMARKET}`;
+        high.innerHTML = `Change 24H: ${(coin.RAW.USD.CHANGEPCT24HOUR)}`;
+        low.innerHTML = `Low: ${coin.RAW.USD.LOWDAY}`;
+        supply.innerHTML = `Supply: ${coin.RAW.USD.SUPPLY}`;
+        append(div, img);
+        append(div, name)
+        append(div, price)
+        append(div, marketCap)
+        append(div, lastMarket)
+        append(div, high)
+        append(div, low)
+        append(div, supply)
+       
+        img.classList.add('scale')
+        name.classList.add('bold');
+        name.classList.add('margin');
+        img.classList.add('margin')
+        price.classList.add('margin', 'blue-text');
+        marketCap.classList.add('margin');
+        lastMarket.classList.add('margin');
+        high.classList.add('margin');
+        low.classList.add('margin');
+        div.classList.add('margin');
+
+
+        })
+        
 
     })
 };
 
-multipleSymbolsPrice();
+topMarketCapDisplayed();
 
 
 
